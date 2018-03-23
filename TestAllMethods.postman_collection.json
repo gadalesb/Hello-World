@@ -1,0 +1,229 @@
+{
+	"id": "188c0f6e-880c-b601-40a5-100875027ae4",
+	"name": "TestAllMethods",
+	"description": "",
+	"order": [
+		"4011f332-7398-6fb7-fa32-5fc29c97c4b0",
+		"876e5fc5-9841-9d49-83df-f6a7086c656e",
+		"a540e37e-9e8c-01ec-1e9c-f9df531b91a8"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1519362937656,
+	"owner": 0,
+	"public": false,
+	"events": [],
+	"variables": [],
+	"auth": null,
+	"requests": [
+		{
+			"id": "4011f332-7398-6fb7-fa32-5fc29c97c4b0",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://postman-echo.com/get?username={{username}}&password={{password}}",
+			"queryParams": [
+				{
+					"key": "username",
+					"value": "{{username}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "{{password}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "18c7bffa-0330-47d4-8652-61e75e1c037e",
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"var jsonData=JSON.parse(responseBody);",
+							"",
+							"",
+							"//tests[\"The File username and password match\"]=responseBody.has(data.username);",
+							"//tests[\"Body is username\"]=responseBody.has(data.password); ",
+							"",
+							"pm.test(\"The File username and password match\")==responseBody.has(data.username);",
+							"pm.test(\"The password match\")==responseBody.has(data.password);",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"auth": {
+				"type": "noauth"
+			},
+			"time": 1519366607110,
+			"name": "GetReq",
+			"description": "",
+			"collectionId": "188c0f6e-880c-b601-40a5-100875027ae4",
+			"responses": [],
+			"preRequestScript": null,
+			"tests": "\nvar jsonData=JSON.parse(responseBody);\n\n\n//tests[\"The File username and password match\"]=responseBody.has(data.username);\n//tests[\"Body is username\"]=responseBody.has(data.password); \n\npm.test(\"The File username and password match\")==responseBody.has(data.username);\npm.test(\"The password match\")==responseBody.has(data.password);\n\npm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\n",
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\r\n\t\"username\":\"pranita\",\r\n\t\"password\":\"sanju\"\r\n\r\n\t}"
+		},
+		{
+			"id": "876e5fc5-9841-9d49-83df-f6a7086c656e",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://postman-echo.com/post?username={{username}}&password={{password}}",
+			"queryParams": [
+				{
+					"key": "username",
+					"value": "{{username}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "{{password}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "18c7bffa-0330-47d4-8652-61e75e1c037e",
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"var jsonData=JSON.parse(responseBody);",
+							"",
+							"",
+							"//tests[\"The File username and password match\"]=responseBody.has(data.username);",
+							"//tests[\"Body is username\"]=responseBody.has(data.password); ",
+							"",
+							"pm.test(\"The File username and password match\")==responseBody.has(data.username);",
+							"pm.test(\"The password match\")==responseBody.has(data.password);",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"auth": {
+				"type": "noauth"
+			},
+			"time": 1519366719623,
+			"name": "PostRes",
+			"description": "",
+			"collectionId": "188c0f6e-880c-b601-40a5-100875027ae4",
+			"responses": [],
+			"preRequestScript": null,
+			"tests": "\nvar jsonData=JSON.parse(responseBody);\n\n\n//tests[\"The File username and password match\"]=responseBody.has(data.username);\n//tests[\"Body is username\"]=responseBody.has(data.password); \n\npm.test(\"The File username and password match\")==responseBody.has(data.username);\npm.test(\"The password match\")==responseBody.has(data.password);\n\npm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\n\n",
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\r\n\t\"username\":\"pranita\",\r\n\t\"password\":\"sanju\",\r\n\t\"EmployeeName\":\"Sanjay\"\r\n\t}"
+		},
+		{
+			"id": "a540e37e-9e8c-01ec-1e9c-f9df531b91a8",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://postman-echo.com/post?username={{username}}&password={{password}}",
+			"queryParams": [
+				{
+					"key": "username",
+					"value": "{{username}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "{{password}}",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"events": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2e8d9b25-dc2b-4c04-ab67-52ba58d3fdfc",
+						"type": "text/javascript",
+						"exec": [
+							"var jsondata=JSON.parse(responseBody);",
+							"",
+							"pm.test(\"The File username and password match\")==responseBody.has(data.username);",
+							"pm.test(\"The password match\")==responseBody.has(data.password);",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"auth": null,
+			"time": 1519367264707,
+			"name": "PutReq",
+			"description": "",
+			"collectionId": "188c0f6e-880c-b601-40a5-100875027ae4",
+			"responses": [],
+			"preRequestScript": null,
+			"tests": "var jsondata=JSON.parse(responseBody);\n\npm.test(\"The File username and password match\")==responseBody.has(data.username);\npm.test(\"The password match\")==responseBody.has(data.password);\n\n",
+			"currentHelper": null,
+			"helperAttributes": null,
+			"rawModeData": "{\n\t\"username\":\"sweta\",\n\t\"password\":\"sanju\",\n\t\"EmployeeName\":\"sanjay\"\n\t}"
+		}
+	]
+}
